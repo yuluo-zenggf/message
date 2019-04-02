@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwua.mapper.MessageMapper">
+	<select id="queryMsgByPage" resultType="Message">
+		select id,sendid,title,msgcontent,state,receiveid,msg_create_date from messages where receiveid= #{receiveid} order by msg_create_date desc limit #{start},#{pageSize}
+	</select>
+	<select id="queryMsgById" resultType="message" parameterType="string">
+		select id,sendid,title,msgcontent,state,receiveid,msg_create_date from messages where id= #{id}
+	</select>
+	<select id="queryCount" resultType="long" parameterType="int">
+		select count(*) from messages where receiveid= #{receiveid}
+	</select>
+	<update id="update" parameterType="message">
+		update messages set state = #{state} where id = #{id}
+	</update>
+	<insert id="save" parameterType="message">
+		insert into messages values(null,#{sendid},#{title},#{msgcontent},#{state},#{receiveid},#{msg_create_date})
+	</insert>
+	<delete id="delete" parameterType="int">
+		delete from messages where id= #{id}
+	</delete>
+</mapper>

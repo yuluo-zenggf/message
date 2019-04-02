@@ -1,0 +1,4 @@
+com\hwua\service\IUserService.class
+com\hwua\service\impl\MessageServiceImpl.class
+com\hwua\service\IMessageService.class
+com\hwua\service\impl\UserServiceImpl.class

@@ -1,0 +1,5 @@
+com\hwua\web\servlet\LoginRegisterController.class
+com\hwua\filter\ValidateUserFilter.class
+com\hwua\web\servlet\MessageController.class
+com\hwua\web\servlet\ValidateCodeController.class
+com\hwua\web\servlet\UserController.class

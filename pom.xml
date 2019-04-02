@@ -11,7 +11,7 @@
 	<!--统一设计版本号，修改起来方便 -->
 	<properties>
 		<mysql.version>5.1.6</mysql.version>
-		<c3p0.version>0.9.5.1</c3p0.version>
+		<c3p0.version>0.9.5.2</c3p0.version>
 		<dbutils.version>1.6</dbutils.version>
 		<fastjson.version>1.2.47</fastjson.version>
 		<jstl.version>1.2</jstl.version>
